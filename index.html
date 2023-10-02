@@ -1,94 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind Project Template</title>
 
-    <link rel="stylesheet" href="./dist/style.css">
-</head>
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
 
-<body
-    class="relative flex min-h-screen items-center justify-center bg-gradient-to-tr from-slate-50 dark:from-slate-950 to-emerald-100 dark:to-emerald-900 text-black dark:text-white">
+  <body
+    class="relative flex min-h-screen items-center justify-center bg-gradient-to-tr from-gray-100 dark:from-gray-900 to-gray-200 dark:to-gray-800 text-gray-50"
+  >
     <!-- Ron's basic template for iCodeThis challenges -->
     <!-- Background -->
     <div
-        class="dark:invert bg-center[mask-image:linear-gradient(black,rgba(255,255,255,10))] absolute inset-0 z-0 animate-pulse overflow-hidden">
-        <svg class="-rotate-6 scale-150 stroke-black/10 opacity-10" width="100%" height="100%"
-            xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse">
-                    <path d="M 8 0 L 0 0 0 8" fill="none" stroke="black" stroke-width="0.5" />
-                </pattern>
-                <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
-                    <rect width="80" height="80" fill="url(#smallGrid)" />
-                    <path d="M 80 0 L 0 0 0 80" fill="none" stroke="black" stroke-width="0.5" />
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
+      class="dark:invert bg-center[mask-image:linear-gradient(black,rgba(255,255,255,10))] absolute inset-0 z-0 animate-pulse overflow-hidden"
+    >
+      <svg
+        class="-rotate-6 scale-150 stroke-black/10 opacity-10"
+        width="100%"
+        height="100%"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern
+            id="smallGrid"
+            width="8"
+            height="8"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 8 0 L 0 0 0 8"
+              fill="none"
+              stroke="black"
+              stroke-width="0.5"
+            />
+          </pattern>
+          <pattern
+            id="grid"
+            width="80"
+            height="80"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect width="80" height="80" fill="url(#smallGrid)" />
+            <path
+              d="M 80 0 L 0 0 0 80"
+              fill="none"
+              stroke="black"
+              stroke-width="0.5"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
     </div>
 
     <!-- Credits -->
-    <div class="absolute bottom-5 right-5 scale-50 hover:scale-110 transition-all origin-bottom-right">
-        <a class="flex flex-col items-center" href="https://www.frontshape.de" target="_blank">
-            <img class="block invert dark:invert-0 w-full max-w-[10rem]"
-                src="https://frontshape.de/wp-content/uploads/2023/05/H1-White.png" alt="">
-            <span class="text-xs">Developed by Ron Wollschläger</span>
-        </a>
+    <div
+      class="absolute bottom-5 right-5 scale-50 hover:scale-110 transition-all origin-bottom-right"
+    >
+      <a
+        class="flex flex-col items-center"
+        href="https://www.frontshape.de"
+        target="_blank"
+      >
+        <img
+          class="block invert dark:invert-0 w-full max-w-[10rem]"
+          src="https://frontshape.de/wp-content/uploads/2023/05/H1-White.png"
+          alt=""
+        />
+        <span class="text-xs">Developed by Ron Wollschläger</span>
+      </a>
     </div>
 
     <!-- Dark mode toggle -->
-    <button class="absolute top-5 right-5 hover:animate-spin-slow">
-        <!-- Light Mode -->
-        <svg xmlns="http://www.w3.org/2000/svg"
-            class="sun icon icon-tabler icon-tabler-sun-filled" width="24" height="24"
-            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
-                stroke-width="0" fill="currentColor"></path>
-            <path
-                d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z"
-                stroke-width="0" fill="currentColor"></path>
-            <path
-                d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
-                stroke-width="0" fill="currentColor"></path>
-            <path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" stroke-width="0"
-                fill="currentColor"></path>
-            <path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" stroke-width="0"
-                fill="currentColor"></path>
-            <path
-                d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z"
-                stroke-width="0" fill="currentColor"></path>
-            <path
-                d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
-                stroke-width="0" fill="currentColor"></path>
-            <path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
-                stroke-width="0" fill="currentColor"></path>
-            <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" stroke-width="0"
-                fill="currentColor"></path>
-        </svg>
+    <button class="absolute top-5 right-5 hover:animate-spin-slow text-gray-800 dark:text-gray-50">
+      <!-- Light Mode -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="sun icon icon-tabler icon-tabler-sun-filled"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+        <path
+          d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+        <path
+          d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+        <path
+          d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+        <path
+          d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+        <path
+          d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+        <path
+          d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+        <path
+          d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+        <path
+          d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+      </svg>
 
-        <!-- Dark Mode -->
-        <svg xmlns="http://www.w3.org/2000/svg"
-            class="moon icon icon-tabler icon-tabler-moon-filled" width="24"
-            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path
-                d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z"
-                stroke-width="0" fill="currentColor"></path>
-        </svg>
+      <!-- Dark Mode -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="moon icon icon-tabler icon-tabler-moon-filled"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z"
+          stroke-width="0"
+          fill="currentColor"
+        ></path>
+      </svg>
     </button>
     <!-- Template END -->
 
-    <main class="bg-slate-200 dark:bg-stone-900 shadow-2xl z-10 w-60 h-60 font-bold uppercase grid place-content-center text-gray-800 dark:text-gray-200 my-40">
-        <span>Main content here</span>
+    <main
+      class="z-10 w-full max-w-screen-sm sm:rounded-xl shadow-lg bg-gray-100 dark:bg-gray-900 overflow-hidden pb-4"
+    >
+      <header class="flex justify-between items-center p-4 bg-blue-950">
+        <h2 class="font-bold text-2xl">Book a massage</h2>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-x hover:scale-110 hover:text-gray-300 cursor-pointer"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M18 6l-12 12"></path>
+          <path d="M6 6l12 12"></path>
+        </svg>
+      </header>
+
+      <div class="flex flex-col justify-center items-center p-4 m-4">
+        <div class="flex items-center gap-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-chevron-left text-gray-950 dark:text-gray-50 hover:text-gray-700 hover:scale-110 cursor-pointer"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M15 6l-6 6l6 6"></path>
+          </svg>
+
+          <div class="flex flex-col justify-center items-center text-gray-950 dark:text-gray-50">
+            <h3 class="text-lg font-bold">Sep. 24</h3>
+            <span class="text-xs font-bold">Today</span>
+          </div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-chevron-right text-gray-950 dark:text-gray-50 hover:text-gray-700 hover:scale-110 cursor-pointer"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M9 6l6 6l-6 6"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="bg-blue-950 w-4/5 mx-auto rounded-xl p-4 m-4">
+        <div class="flex justify-between">
+          <div class="flex flex-col">
+            <h3 class="text-lg font-bold">Hot stone massage</h3>
+            <span class="text-xs font-light">09:30 · 60 min</span>
+          </div>
+          <a href="https://icodethis.com/Adrian" target="_blank">
+            <button
+              class="px-4 py-2 rounded-lg bg-gray-100 text-gray-950 text-sm font-bold"
+            >
+              Book an appointment
+            </button>
+          </a>
+        </div>
+        <div class="flex flex-col mt-4 gap-1">
+          <span class="text-xs font-light">Massage by</span>
+          <div class="flex items-center gap-1">
+            <img
+              class="w-6 h-6 rounded-full border-2 border-blue-900"
+              src="https://shismqklzntzxworibfn.supabase.co/storage/v1/object/public/avatars/6d9761f7-21fd-49dc-b8d6-f7e17c2b6234.jpg"
+              alt="Profile image from Adrian"
+            />
+            <span class="text-sm">Adrian</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blue-950 w-4/5 mx-auto rounded-xl p-4 m-4">
+        <div class="flex justify-between">
+          <div class="flex flex-col">
+            <h3 class="text-lg font-bold">Thai massage</h3>
+            <span class="text-xs font-light">11:30 · 60 min</span>
+          </div>
+          <a href="https://icodethis.com/Neluttu" target="_blank">
+            <button
+              class="px-4 py-2 rounded-lg bg-gray-100 text-gray-950 text-sm font-bold"
+            >
+              Book an appointment
+            </button>
+          </a>
+        </div>
+        <div class="flex flex-col mt-4 gap-1">
+          <span class="text-xs font-light">Massage by</span>
+          <div class="flex items-center gap-1">
+            <img
+              class="w-6 h-6 rounded-full border-2 border-blue-900"
+              src="https://shismqklzntzxworibfn.supabase.co/storage/v1/object/public/avatars/ef331e37-43e0-48bc-aa39-425ee8295f95.jpg"
+              alt="Profile image from Neluttu"
+            />
+            <span class="text-sm">Neluttu</span>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="./dist/main.js"></script>
-</body>
-
+  </body>
 </html>
